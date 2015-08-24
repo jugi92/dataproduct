@@ -22,15 +22,15 @@ testing <- testing[,colSums(is.na(testing)) < nrow(testing)]
 
 library(caret)
 
-library(doParallel)
-cl <- makeCluster(2)
-registerDoParallel(cl)
+# library(doParallel)
+# cl <- makeCluster(2)
+# registerDoParallel(cl)
 
-fitControl <- trainControl(## 10-fold CV
-  method = "repeatedcv",
-  number = 10,
+#fitControl <- trainControl(## 10-fold CV
+ # method = "repeatedcv",
+  #number = 10,
   ## repeated ten times
-  repeats = 10)
+  #repeats = 10)
 
 
 training <- training[,c("pitch_forearm","yaw_belt","magnet_dumbbell_z","pitch_belt","magnet_dumbbell_y","accel_belt_z","roll_forearm","magnet_belt_y","roll_dumbbell","accel_dumbbell_y","classe")]

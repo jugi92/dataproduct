@@ -1,0 +1,44 @@
+A data Product
+========================================================
+author: Julian Gimbel
+date: 21.8.2015
+
+Task
+========================================================
+
+With this data product the task to choose an algorithm for modeling the data from the coursera practical machine learning assignment is made easier.
+The user can simply select the algorithm he thinks is best and compare the results after applying the algorithm to the training data.
+
+
+Data
+=======================================================
+The data is the data from the coursera practical machine learning task for prediction and shows the correct execution of sport with attributes measured through fitness watches and belts.
+The training data for this project are available here:
+https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv
+The test data are available here:
+https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
+The data for this project comes from this original source: http://groupware.les.inf.puc-rio.br/har.
+
+Data Summary
+=========================================================
+A short summary of the data is provided here:
+```{r echo=FALSE}
+training <- read.csv("pml-training.csv")
+summary(training)
+```
+
+
+Modeling Methods
+========================================================
+There are three choices: 
+- rpart(Classification and regression trees)
+- rf(Random Forest)
+- xyf(Self-Organizing Maps)
+
+
+Concerns
+========================================================
+
+The modeling is only done on training data, not even on test data. This might lead to overfitting in some cases. Random Forest already includes cross validation and therefor might be a good comparison to see if other algorithms overfit to the data.
+
+Have Fun with this neat little product.
